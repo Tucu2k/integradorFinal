@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/deportiva_2-removebg-preview.png"
+      image: "/assets/deportiva_1-removebg-preview.png"
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/deportiva_3-removebg-preview.png"
+      image: "/assets/deportiva_2-removebg-preview.png"
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/deportiva_1-removebg-preview.png"
+      image: "/assets/deportiva_3-removebg-preview.png"
     },
     {
       id: 4,
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 150,
       category: "Woman",
       detail: "Woman Shoe",
-      image: "/Mujer_1-removebg-preview.png"
+      image: "/assets/Mujer_1-removebg-preview.png"
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       price: 150,
       category: "Woman",
       detail: "Woman Shoe",
-      image: "/mujer_2-removebg-preview.png"
+      image: "/assets/mujer_2-removebg-preview.png"
     },
     {
       id: 6,
