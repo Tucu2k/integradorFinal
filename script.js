@@ -2,87 +2,101 @@ document.addEventListener("DOMContentLoaded", () => {
   const products = [
     {
       id: 1,
-      name: "Nike Rocket",
+      name: "Vortex Run X",
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/assets/deportiva_1-removebg-preview.png"
+      image: "/assets/1011b872-402_A-removebg-preview.png"
     },
     {
       id: 2,
-      name: "Nike Blue Sky",
+      name: "Neon Pulse",
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/assets/deportiva_2-removebg-preview.png"
+      image: "/assets/nike_dh5392-400_0000-removebg-preview.png"
     },
     {
       id: 3,
-      name: "Nike force 1",
+      name: "Skytrail Pro",
       price: 150,
       category: "Running",
       detail: "Running Shoe",
-      image: "/assets/deportiva_3-removebg-preview.png"
+      image: "/assets/Zapatillas-maraton-New-Balance-FuelCell-SuperComp-Elite-v3-1024x1024-removebg-preview.png"
     },
     {
       id: 4,
-      name: "Zapato de mujer 1",
+      name: "Velvet Grace",
       price: 150,
       category: "Woman",
       detail: "Woman Shoe",
-      image: "/assets/Mujer_1-removebg-preview.png"
+      image: "/assets/1a20ca02-1dfb-4a53-82df-77675e1ff9a7-d4487ddd25392b26b517471691498166-1024-1024-removebg-preview.png"
     },
     {
       id: 5,
-      name: "Zapato de mujer 2",
+      name: "Luna Etoile",
       price: 150,
       category: "Woman",
       detail: "Woman Shoe",
-      image: "/assets/mujer_2-removebg-preview.png"
+      image: "/assets/zapato-vestir-azul-mujer-dino-butelli-4-removebg-preview.png"
     },
     {
       id: 6,
-      name: "Zapato de hombre 1",
+      name: "Montecarlo Prime",
       price: 150,
       category: "Man",
       detail: "Man Shoe",
+      image: "/assets/Palermo-Negro-1-removebg-preview.png"
     },
     {
       id: 7,
-      name: "Zapato de hombre 2",
+      name: "Sable Noir",
       price: 150,
-      category: "Man"
+      detail: "Man shoe",
+      category: "Man",
+      image: "/assets/dillan-1243-4-d9402e0854c3fdb27a17254654641202-1024-1024-removebg-preview.png"
     },
     {
       id: 8,
-      name: "botines de futbol 1",
+      name: "Stormkick Elite",
       price: 150,
-      category: "Football"
+      detail : "Football",
+      category: "Football",
+      image : "/assets/PU107767-01-6-removebg-preview.png"
+
     },
     {
       id: 9,
-      name: "botines de futbol 2",
+      name: "Inferno Blade",
       price: 150,
-      category: "Football"
+      detail : "Football",
+      category: "Football",
+      image: "/assets/D_NQ_NP_752859-MLA80098993734_102024-O-removebg-preview.png"
+
     },
     {
       id: 10,
-      name: "Basket shoes 1",
+      name: "Gravity Bounce",
       price: 150,
-      category: "Basket"
+      detail : "Basket Shoe",
+      category: "Basket",
+      image : "/assets/TO89605-6-removebg-preview.png"
     },
     {
       id: 11,
-      name: "Basket shoes 2",
+      name: "Rebound ZR",
       price: 150,
-      category: "Basket"
+      detail : "Basket Shoe",
+      category: "Basket",
+      image : "/assets/UA3026640-300-6-removebg-preview.png"
     },
     {
       id: 12,
-      name: "Basket shoes 3",
+      name: "Dunk Eclipse",
       price: 150,
+      detail : "Basket Shoe",
       category: "Basket",
-      image: ""
+      image: "/assets/5f523250f151c-1924-4-removebg-preview.png"
     }
   ];
 
@@ -176,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cartTotal.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
   }
-  
+  ''
 
   const toggleCartBtn = document.getElementById("toggle-cart");
   const cartDiv = document.getElementById("cart");
@@ -191,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
-  const categories = ["all", "Basket", "Woman", "Man", "Football", "Running"];
+  const categories = ["Basket", "Woman", "Man", "Football", "Running"];
   categories.forEach((category) => {
     const option = document.createElement("option");
     option.value = category;
@@ -226,7 +240,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const formmessage = document.getElementById("formMensaje");
+
+  if (!name || !email || !message) {
+    formmessage.textContent = "Por favor, completa todos los campos.";
+    formmessage.style.color = "red";
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    formmessage.textContent = "Por favor, ingresa un email válido.";
+    formmessage.style.color = "red";
+    return;
+  }
+
+  formmessage.textContent = "Mensaje enviado correctamente. ¡Gracias por contactarnos!";
+  formmessage.style.color = "green";
+
+  document.getElementById("contactForm").reset();
+});
 
 });
 
