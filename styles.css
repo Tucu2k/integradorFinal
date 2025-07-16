@@ -199,7 +199,7 @@ nav > img {
 }
 #product-list li {
   width: 250px; /* o el tamaño que uses para el producto */
-  background: white;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -218,6 +218,7 @@ nav > img {
   justify-content: center;
   align-items: center;
 }
+
 
 .product-list article:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
