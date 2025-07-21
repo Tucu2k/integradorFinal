@@ -24,7 +24,7 @@ ul {
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  padding: 1rem;
+  
 }
 
 nav {
@@ -32,6 +32,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  
 }
 
 nav > img {
@@ -487,6 +493,7 @@ header {
 
   .hero {
     padding: 1.5rem;
+    margin-top: 6rem;
   }
 
 }
